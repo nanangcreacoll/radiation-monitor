@@ -24,8 +24,8 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 function createDoseRateChart(data) {
-    var outdoorData = data.dose_rate_outdoor;
-    var indoorData = data.dose_rate_indoor;
+    var outdoorData = data.doseRateOutdoor;
+    var indoorData = data.doseRateIndoor;
 
     var doseRateOutdoor = [];
     var doseRateIndoor = [];
@@ -69,14 +69,14 @@ function createDoseRateChart(data) {
             {
                 label: "Monitor Dalam",
                 lineTension: 0.3,
-                backgroundColor: "rgba(248, 196, 60, 0.05)",
-                borderColor: "rgba(248, 196, 60, 1)",
+                backgroundColor: "rgba(246, 194, 62, 0.05)",
+                borderColor: "rgba(246, 194, 62, 1)",
                 pointRadius: 3,
-                pointBackgroundColor: "rgba(248, 196, 60, 1)",
-                pointBorderColor: "rgba(248, 196, 60, 1)",
+                pointBackgroundColor: "rgba(246, 194, 62, 1)",
+                pointBorderColor: "rgba(246, 194, 62, 1)",
                 pointHoverRadius: 3,
-                pointHoverBackgroundColor: "rgba(248, 196, 60, 1)",
-                pointHoverBorderColor: "rgba(248, 196, 60, 1)",
+                pointHoverBackgroundColor: "rgba(246, 194, 62, 1)",
+                pointHoverBorderColor: "rgba(246, 194, 62, 1)",
                 pointHitRadius: 10,
                 pointBorderWidth: 2,
                 data: doseRateIndoor,
