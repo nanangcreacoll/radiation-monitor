@@ -58,7 +58,7 @@
                                 Kelembapan</div>
                             <div class="h3 mb-0 font-weight-bold text-gray-800">
                                 <text id="outdoor-humidity">
-                                    {{ trim(json_encode($latestData->original['humidity'])) }}
+                                    {{ trim(json_encode($latestData->original['humidity']),'"') }}
                                 </text>
                                 <sup class="font-weight-normal">%</sup>
                             </div>
