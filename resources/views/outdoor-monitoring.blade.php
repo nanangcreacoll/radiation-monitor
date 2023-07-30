@@ -40,7 +40,7 @@
                                 Suhu</div>
                             <div class="h3 mb-0 font-weight-bold text-gray-800">
                                 <text id="outdoor-temperature">
-                                    {{ json_encode($latestData->original['temperature']) }}
+                                    {{ str_replace('""','',json_encode($latestData->original['temperature'])) }}
                                 </text>
                                 <sup class="font-weight-normal">&#8451;</sup>
                             </div>
@@ -58,7 +58,7 @@
                                 Kelembapan</div>
                             <div class="h3 mb-0 font-weight-bold text-gray-800">
                                 <text id="outdoor-humidity">
-                                    {{ json_encode($latestData->original['humidity']) }}
+                                    {{ str_replace('""','',json_encode($latestData->original['humidity'])) }}
                                 </text>
                                 <sup class="font-weight-normal">%</sup>
                             </div>
