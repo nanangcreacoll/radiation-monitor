@@ -59,9 +59,8 @@ class DashboardController extends Controller
         $time = Carbon::now()->format('Y-m-d');
 
         $highestDoseRateOutdoor = OutdoorMonitoring::whereDate('time', $time)->max('dose_rate');
-        $highestDoseRateIndoor = IndoorMonitoring::whereDate('time', $time)->max('dose_rate');
 
-        $highestDoseRate = max($highestDoseRateOutdoor, $highestDoseRateIndoor);
+        $highestDoseRate = max($highestDoseRateOutdoor);
         
         return response()->json(['highest_dose_rate' => $highestDoseRate]);
     }
