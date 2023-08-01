@@ -60,8 +60,6 @@ class DashboardController extends Controller
 
         $highestDoseRateOutdoor = OutdoorMonitoring::whereDate('time', $time)->max('dose_rate');
 
-        $highestDoseRate = max($highestDoseRateOutdoor);
-        
-        return response()->json(['highest_dose_rate' => $highestDoseRate]);
+        return response()->json(['highest_dose_rate' => $highestDoseRateOutdoor]);
     }
 }
